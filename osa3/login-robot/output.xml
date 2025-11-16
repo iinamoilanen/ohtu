@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.14.0 on win32)" generated="20251116 13:11:40.316" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="C:\Users\iinam\ohtu\osa3\login-robot\src\tests\login.robot">
+<test id="s1-t1" name="Login With Correct Credentials" line="6">
+<kw name="Create User And Input Login Command" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20251116 13:11:40.422" endtime="20251116 13:11:40.422"/>
+</kw>
+<kw name="Input Login Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>login</arg>
+<status status="PASS" starttime="20251116 13:11:40.423" endtime="20251116 13:11:40.423"/>
+</kw>
+<status status="PASS" starttime="20251116 13:11:40.423" endtime="20251116 13:11:40.423"/>
+</kw>
+<status status="PASS" starttime="20251116 13:11:40.421" endtime="20251116 13:11:40.423"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20251116 13:11:40.424" endtime="20251116 13:11:40.424"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20251116 13:11:40.424" endtime="20251116 13:11:40.425"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20251116 13:11:40.425" endtime="20251116 13:14:55.615"/>
+</kw>
+<status status="PASS" starttime="20251116 13:11:40.424" endtime="20251116 13:14:55.615"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>Logged in</arg>
+<msg timestamp="20251116 13:14:55.616" level="FAIL">Output "Logged in" is not in ['']</msg>
+<status status="FAIL" starttime="20251116 13:14:55.616" endtime="20251116 13:14:55.686"/>
+</kw>
+<status status="FAIL" starttime="20251116 13:11:40.420" endtime="20251116 13:14:55.686">Output "Logged in" is not in ['']</status>
+</test>
+<status status="FAIL" starttime="20251116 13:11:40.319" endtime="20251116 13:14:55.687"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
